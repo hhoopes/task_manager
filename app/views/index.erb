@@ -1,0 +1,27 @@
+
+<nav class='navbar navbar-default navbar-fixed-top navcustom'>
+  <div class='container navcustom'>
+  <a href='/' class='navbar-brand navcustom'>Taskr</a>
+  <ul class='nav navbar-nav navcustom'>
+    <li><a href="/tasks">Task Index</a></li>
+    <li><a href="/tasks/new">New Task</a></li>
+  </ul>
+</div>
+</nav>
+
+<div class='container'>
+  <div class='row well-sm'>
+    <div class='col-md-12 text-center'>
+      <h1>All Tasks</h1>
+    </div>
+  </div>
+
+  <div>
+    <div class="col-med-4">
+      <% @tasks.each do |task| %>
+          <h3><i class="glyphicon glyphicon-check"></i>
+            <%= task.id %>: <a href="/tasks/<%= task.id %>"><%= task.title  %></a></h3>
+      <% end %>
+    </div>
+  </div>
+</div>
