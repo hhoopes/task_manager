@@ -9,6 +9,7 @@ class TaskManager
   end
 
   def create(task) # do this all atomically, transaction adds stuff via YAML
+
     database.transaction do
       database['tasks'] ||=[]
       database['total'] ||=0
