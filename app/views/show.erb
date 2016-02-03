@@ -12,4 +12,9 @@
 <div>
   <h1><%= @task.title %></h1>
   <p><%= @task.description %></p>
+  <A HREF ="/tasks/<%= @task.id %>/edit">Edit</A>
+  <form action="/tasks/<%= @task.id %>" method="post">
+    <input type="hidden"  name="_method" value="delete">
+    <input type="submit" value="Delete">
+  </form>
 </div>

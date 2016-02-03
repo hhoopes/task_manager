@@ -9,7 +9,6 @@ class TaskManager
   end
 
   def create(task) # do this all atomically, transaction adds stuff via YAML
-
     database.transaction do
       database['tasks'] ||=[]
       database['total'] ||=0
@@ -34,5 +33,20 @@ class TaskManager
 
   def find(id)
     Task.new(raw_task(id))
+  end
+
+  def update(task, id)
+    database.transaction do
+      target_task = database["tasks"].find { |task| task["id"] == id.to_i }
+
+      target_task["title"]       = task['title']
+      target_task["description"] = task['description']
+    end
+  end
+
+  def delete(id)
+    database.transaction do
+      database["tasks"].delete_if { |task| task["id"] == id.to_i }
+    end
   end
 end

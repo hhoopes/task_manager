@@ -1,8 +1,5 @@
 ---
 tasks:
-- id: 1
-  title: Pet Suki
-  description: She wants love!
 - id: 2
   title: Make cookies
   description: Cookies are love
